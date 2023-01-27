@@ -121,7 +121,8 @@ export default function Navbar() {
                 </>
               )}
             </Popover>
-
+            
+        
             <a href="#" className="text-base font-medium  hover:text-gray-900">
               Gallery
             </a>
@@ -129,7 +130,7 @@ export default function Navbar() {
               Contact Us
             </a>
 
-            
+           
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
@@ -149,14 +150,14 @@ export default function Navbar() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel focus className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
+        <Popover.Panel focus className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden z-50">
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-            <div className="px-5 pt-5 pb-6">
+            <div className="px-5 pt-5 pb-6 ">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  <Image
+                    className="h-10 w-auto"
+                    src={logo}
                     alt="Your Company"
                   />
                 </div>
@@ -167,8 +168,22 @@ export default function Navbar() {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="mt-6">
+              <div className="mt-6 z-100">
                 <nav className="grid gap-y-8">
+                  <div className='grid gris-cols-2 w-full gap-y-8'>
+                <a href="#" className="text-base font-medium  hover:text-gray-900">
+              Home
+            </a>
+            <a href="#" className="text-base font-medium  hover:text-gray-900">
+              About
+            </a>
+                <a href="#" className="text-base font-medium  hover:text-gray-900">
+              Gallery
+            </a>
+            <a href="#" className="text-base font-medium  hover:text-gray-900">
+              Contact Us
+            </a>
+            </div>
                   {solutions.map((item) => (
                     <a
                       key={item.name}
