@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 @import '../../node_modules/swiper/swiper-bundle.css';
+
+.blob-bg {
+  background-image: url('../assets/images/blob.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  transform:translate(-50%, -50%) ;
+}

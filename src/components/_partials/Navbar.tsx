@@ -13,23 +13,24 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const solutions = [
   {
     name: 'Staging & Ground Support',
     description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    href: '/staging',
     icon: ChartBarIcon,
   },
   {
     name: 'Rental',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    href: '/rental',
     icon: CursorArrowRaysIcon,
   }, {
     name: 'Video',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    href: '/video',
     icon: CursorArrowRaysIcon,
   },
  
@@ -42,13 +43,15 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+
+  const loc = '/'
   return (
-    <Popover className="relative bg-white mb-0">
+    <Popover className="relative bg-bgColor mb-0 text-white">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between  py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only"></span>
               <Image
                 className="w-auto h-[80px]"
                 src={logo}
@@ -57,25 +60,25 @@ export default function Navbar() {
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
+            <Popover.Button className="inline-flex items-center justify-center rounded-md  p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex ">
-          <a href="#" className="text-base font-medium  hover:text-gray-900">
+          <Link href="/" className="text-base font-medium  hover:text-gray-900">
               Home
-            </a>
-            <a href="#" className="text-base font-medium  hover:text-gray-900">
+            </Link>
+            <Link href="/about" className="text-base font-medium  hover:text-gray-900">
               About
-            </a>
+            </Link>
             <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
                     className={classNames(
                       open ? 'text-gray-900' : '',
-                      'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 '
+                      'group inline-flex items-center rounded-md  text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 '
                     )}
                   >
                     <span>Services</span>
@@ -101,7 +104,7 @@ export default function Navbar() {
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {solutions.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
                               href={item.href}
                               className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
@@ -111,7 +114,7 @@ export default function Navbar() {
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
                                 <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                      
@@ -123,12 +126,16 @@ export default function Navbar() {
             </Popover>
             
         
-            <a href="#" className="text-base font-medium  hover:text-gray-900">
+            <Link href="/gallery" className="text-base font-medium  hover:text-gray-900">
               Gallery
-            </a>
-            <a href="#" className="text-base font-medium  hover:text-gray-900">
+            </Link>
+            {loc=='/'?
+            <a href="#contact-us" className="text-base font-medium  hover:text-gray-900">
               Contact Us
-            </a>
+            </a>:
+            <Link href="/" className="text-base font-medium  hover:text-gray-900">
+            Contact Us
+          </Link>}
 
            
           </Popover.Group>
@@ -171,18 +178,22 @@ export default function Navbar() {
               <div className="mt-6 z-100">
                 <nav className="grid gap-y-8">
                   <div className='grid gris-cols-2 w-full gap-y-8'>
-                <a href="#" className="text-base font-medium  hover:text-gray-900">
+                <Link href="/" className="text-base font-medium  hover:text-gray-900">
               Home
-            </a>
-            <a href="#" className="text-base font-medium  hover:text-gray-900">
+            </Link>
+            <Link href="/about" className="text-base font-medium  hover:text-gray-900">
               About
-            </a>
-                <a href="#" className="text-base font-medium  hover:text-gray-900">
+            </Link>
+                <Link href="/gallery" className="text-base font-medium  hover:text-gray-900">
               Gallery
-            </a>
-            <a href="#" className="text-base font-medium  hover:text-gray-900">
+            </Link>
+            {loc=='/'?
+            <a href="#contact-us" className="text-base font-medium  hover:text-gray-900">
               Contact Us
-            </a>
+            </a>:
+            <Link href="/" className="text-base font-medium  hover:text-gray-900">
+            Contact Us
+          </Link>}
             </div>
                   {solutions.map((item) => (
                     <a
