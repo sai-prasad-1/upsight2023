@@ -4,7 +4,9 @@ export async function middleware(req: NextRequest) {
     if (req.method === 'POST') {
     const role = req.headers.get("authorization");
     if (role !== "admin") {
-        return NextResponse.redirect('/unauthorized');
+        const url = req.nextUrl.clone();
+        url.pathname = '/unauthorized'; 
+        return NextResponse.redirect(url);
     }
     console.log('Request:', req.url,"midle ware works");
   }
