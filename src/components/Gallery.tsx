@@ -24,7 +24,7 @@ function Gallery ({}: Props) {
     <section>
     <div className="bg-bgColor py-6 sm:py-8 lg:py-12">
       <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
-        <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-8 xl:mb-12">Gallery</h2>
+        <h2 className="text-gray-50 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-8 xl:mb-12">Gallery</h2>
 
         <div className='mb-6'>
           <Swiper
@@ -72,7 +72,7 @@ function Gallery ({}: Props) {
         </div>
 
         <div className="flex justify-between items-start sm:items-center gap-8">
-          <p className="max-w-screen-sm text-gray-500 text-sm lg:text-base">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+          <p className="max-w-screen-sm text-gray-500 text-sm lg:text-base">Discover the beauty and excellence of our work through our event gallery images.</p>
 
           <a href="#" className="inline-block bg-white hover:bg-gray-100 active:bg-gray-200 focus-visible:ring ring-indigo-300 border text-gray-500 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-4 md:px-8 py-2 md:py-3">More</a>
         </div>

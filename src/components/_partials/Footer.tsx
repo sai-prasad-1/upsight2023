@@ -6,7 +6,7 @@ type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <div className="bg-white pt-4 sm:pt-10 lg:pt-12">
+    <div className="bg-bgColor pt-4 sm:pt-10 lg:pt-12">
   <footer className="max-w-screen-2xl px-4 md:px-8 mx-auto">
     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-t gap-12 lg:gap-8 pt-10 lg:pt-12 mb-16">
       <div className="col-span-full lg:col-span-2">
@@ -50,23 +50,23 @@ const Footer = (props: Props) => {
 
       {/* <!-- nav - start --> */}
       <div>
-        <div className="text-gray-800 font-bold tracking-widest uppercase mb-4">Services</div>
+        <div className="text-gray-50 font-bold tracking-widest uppercase mb-4">Services</div>
 
         <nav className="flex flex-col gap-4">
           <div>
-            <a href="#" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Light</a>
+            <a href="#" className="text-gray-500 hover:text-[#a3832d] active:text-[#a3832d]transition duration-100">Light</a>
           </div>
 
           <div>
-            <a href="#" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Sound</a>
+            <a href="#" className="text-gray-500 hover:text-[#a3832d] active:text-[#a3832d]transition duration-100">Sound</a>
           </div>
 
           <div>
-            <a href="#" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Staging</a>
+            <a href="#" className="text-gray-500 hover:text-[#a3832d] active:text-[#a3832d]transition duration-100">Staging</a>
           </div>
 
           <div>
-            <a href="#" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Ground Support</a>
+            <a href="#" className="text-gray-500 hover:text-[#a3832d] active:text-[#a3832d]transition duration-100">Ground Support</a>
           </div>
         </nav>
       </div>
@@ -74,19 +74,19 @@ const Footer = (props: Props) => {
 
       {/* <!-- nav - start --> */}
       <div>
-        <div className="text-gray-800 font-bold tracking-widest uppercase mb-4">Information</div>
+        <div className="text-gray-50 font-bold tracking-widest uppercase mb-4">Information</div>
 
         <nav className="flex flex-col gap-4">
           <div>
-            <a href="#" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">About</a>
+            <a href="#" className="text-gray-500 hover:text-[#a3832d] active:text-[#a3832d]transition duration-100">About</a>
           </div>
 
           <div>
-            <a href="#" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Gallery</a>
+            <a href="#" className="text-gray-500 hover:text-[#a3832d] active:text-[#a3832d]transition duration-100">Gallery</a>
           </div>
 
           <div>
-            <a href="#" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Rental</a>
+            <a href="#" className="text-gray-500 hover:text-[#a3832d] active:text-[#a3832d] transition duration-100">Rental</a>
           </div>
 
          
@@ -96,11 +96,11 @@ const Footer = (props: Props) => {
 
       {/* <!-- nav - start --> */}
       <div>
-        <div className="text-gray-800 font-bold tracking-widest uppercase mb-4">Address</div>
+        <div className="text-gray-50 font-bold tracking-widest uppercase mb-4">Address</div>
 
         <nav className="flex flex-col gap-4">
           <div>
-            <a href="#" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100"><ul>
+            <a href="#" className="text-gray-500 hover:text-[#a3832d] active:text-[#a3832d] transition duration-100"><ul>
                         <li>121 Commerce Park Drive, Unit F</li>
                          <li>Barrie Ontario, L4N 8X1</li>
                        
