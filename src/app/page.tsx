@@ -5,7 +5,6 @@ import HeroSlider from '@/components/HeroSlider';
 import Gallery from '@/components/Gallery';
 import ContactUs from '@/components/ContactUs';
 import Cookies from '@/components/Cookies';
-import blob from '@/assets/images/blob.png'
 import rent1 from '@/assets/images/rent1.jpg'
 import rent2 from '@/assets/images/rent2.jpg'
 import rent3 from '@/assets/images/rent3.jpg'
